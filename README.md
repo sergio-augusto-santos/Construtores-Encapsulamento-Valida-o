@@ -50,10 +50,3 @@ A ideia central é:
 ---
 
 ## 📂 Estrutura do Projeto (Exemplo)
-
-```text
-src/
- └── dominio/
-     └── Cliente.java
- └── app/
-     └── Main.java
