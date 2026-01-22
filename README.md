@@ -1,52 +1,100 @@
-# 🗡️ DIA 2 — Construtores, Encapsulamento e Validação (Java 17)
+# Primeira Classe com Encapsulamento
 
-📅 **Dia 2 da jornada de Programação Orientada a Objetos em Java**  
-🎯 **Foco:** Criar classes mais seguras, consistentes e alinhadas às boas práticas de OOP
+## 📚 Sobre o Projeto
 
----
+Projeto educacional desenvolvido como parte do **Bootcamp Accenture - DIO** (Digital Innovation One).
 
-## 📌 Objetivo do Dia
+Este projeto demonstra os conceitos fundamentais de **Programação Orientada a Objetos (POO)**, com foco em **encapsulamento** e o padrão de design **getter/setter** em Java.
 
-No segundo dia, o foco foi **evoluir a qualidade das classes**, saindo de estruturas simples e passando a trabalhar com:
+## 🎯 Objetivo
 
-- Construtores bem definidos
-- Encapsulamento real dos atributos
-- Validação de regras de negócio diretamente no objeto
+Aprender e praticar:
+- **Encapsulamento**: proteção de dados através de atributos privados
+- **Getters**: métodos para acessar valores privados
+- **Setters**: métodos para modificar valores privados de forma controlada
+- **Boas práticas**: organização e estruturação de classes Java
 
-A ideia central é:  
-> **O objeto deve nascer válido e permanecer válido.**
+## 📁 Estrutura do Projeto
 
----
+O workspace contém as seguintes pastas:
 
-## 🧱 Conceitos Trabalhados
+- **`src/`**: contém os arquivos fonte Java
+  - `Main.java`: classe principal com exemplo de uso
+  - `Pessoas.java`: classe modelo com encapsulamento
+- **`lib/`**: pasta para manter dependências
+- **`bin/`**: pasta onde os arquivos compilados são gerados automaticamente
 
-### 🔹 Construtores
-- Criação de construtores para inicializar o objeto corretamente
-- Evitar objetos em estado inconsistente
-- Uso de `this` para diferenciar atributos de parâmetros
-- Centralização da lógica de criação
+## 💻 Classes Principais
 
-### 🔹 Encapsulamento
-- Atributos privados (`private`)
-- Acesso controlado via métodos públicos
-- Proteção do estado interno da classe
-- Evitar acesso direto aos dados
+### Pessoas.java
+Classe modelo que demonstra encapsulamento com:
+- **Atributos privados**: `nome`, `idade`, `endereco`
+- **Getters**: `getNome()`, `getIdade()`, `getEndereco()`
+- **Setters**: `setNome()`, `setIdade()`, `setEndereco()`
 
-### 🔹 Validação
-- Regras de negócio aplicadas no construtor e/ou setters
-- Impedir valores inválidos (ex: números negativos, strings vazias)
-- Uso de exceções (`IllegalArgumentException`)
-- Garantia de integridade do objeto
+### Main.java
+Classe de execução que:
+- Instancia objetos da classe `Pessoas`
+- Demonstra o uso de getters e setters
+- Exibe as informações dos objetos criados
 
----
+## 🚀 Como Executar
 
-## 🛠️ Tecnologias Utilizadas
+### Compilação
+O VS Code compila automaticamente os arquivos ao salvar (com a extensão Java instalada).
 
-- **Java 17**
-- Programação Orientada a Objetos (OOP)
-- IDE: IntelliJ IDEA / VS Code
-- JDK 17+
+### Execução
+```bash
+java -cp bin Main
+```
 
----
+### Saída Esperada
+```
+Masculino: Pedro idade 30
+Feminino: Maria idade 23
+Endereço do masculino: Rua A, 123
+```
 
-## 📂 Estrutura do Projeto (Exemplo)
+## 🔑 Conceitos-Chave
+
+### Encapsulamento
+```java
+private String nome;        // Atributo privado - acesso controlado
+
+public String getNome() {   // Getter - leitura controlada
+    return nome;
+}
+
+public void setNome(String nome) {  // Setter - modificação controlada
+    this.nome = nome;
+}
+```
+
+## 📋 Estrutura de Pastas
+
+```
+├── README.md
+├── .gitignore
+├── src/
+│   ├── Main.java
+│   └── Pessoas.java
+├── bin/
+└── lib/
+```
+
+## 🛠️ Ferramentas Utilizadas
+
+- **Linguagem**: Java 17+
+- **IDE**: Visual Studio Code
+- **Extensão**: Extension Pack for Java (Microsoft)
+
+## 📝 Notas Importantes
+
+- Não há dependências externas neste projeto
+- O projeto segue as convenções de nomenclatura Java
+- Atributos são sempre `private` para garantir encapsulamento
+- Métodos de acesso (`getters`/`setters`) são sempre `public`
+
+## 🎓 Referências
+
+Este projeto faz parte do aprendizado em **Programação Orientada a Objetos** do Bootcamp Accenture - DIO.
